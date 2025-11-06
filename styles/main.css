@@ -1,0 +1,92 @@
+body {
+  font-family: nunito;
+  background-color: #eeeaeb;
+}
+label {
+  display: block;
+}
+input {
+  border-radius: 8px;
+  border-color: #7b7b80;
+  border-width: 1px;
+}
+.registration-container {
+  background-image: url(/images/createAccountPage.jpg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+}
+.sign-in-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  gap: 20px;
+}
+.input-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-section {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.image-section img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+.input-field {
+  width: 555px;
+  background-color: white;
+  padding: 60px 50px 80px 50px;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+}
+.me {
+  color: #f7b602;
+}
+.welcome-text {
+  font-size: 32px;
+  font-weight: 600;
+}
+.gray {
+  color: gray;
+  font-size: 16px;
+}
+.link {
+  color: #f7b602;
+  font-size: 16px;
+  text-decoration: none;
+}
+.data-field {
+  width: 100%;
+  height: 45px;
+}
+.email-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+.main-button {
+  color: black;
+  width: 100%;
+  height: 48px;
+  background-color: #f7b602;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  border-width: 0px;
+}
