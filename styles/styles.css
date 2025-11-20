@@ -584,17 +584,22 @@ body {
 }
 
 .metrics {
+  font-weight: 400;
   display: flex;
   align-items: center;
   color: #515151;
 }
 
-.metrics--is-large {
-  font-size: 20px;
+.metrics-button:active {
+  font-weight: bold;
 }
 
-.metrics--is-small {
-  font-size: 12px;
+/* .material-symbols-outlined:active {
+  font-weight: bold;
+} */
+
+.metrics--is-large {
+  font-size: 20px;
 }
 
 .wrapper {
@@ -664,12 +669,30 @@ body {
 
 .metrics-button {
   display: flex;
-  align-items: baseline;
+  align-items: top;
   border-width: 0px;
   background-color: white;
   font-size: 16px;
   color: grey;
   cursor: pointer;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.metrics-button__label {
+  cursor: pointer;
+}
+
+.metrics-button__label:active {
+  font-weight: bold;
+}
+
+.metrics:active {
+  font-weight: bold;
+}
+
+.metrics-button--is-small {
+  font-size: 14px;
 }
 
 .metrics-button__text {
