@@ -591,6 +591,10 @@ body {
 }
 
 .metrics-button:active {
+  font-weight: bold !important;
+}
+
+.metrics-button:active .metrics-button__icon {
   font-weight: bold;
 }
 
@@ -602,12 +606,12 @@ body {
   font-size: 20px;
 }
 
-.wrapper {
+/* .wrapper {
   padding: 80px 0px;
   display: flex;
   flex-direction: column;
   gap: 100px;
-}
+} */
 
 /* ---------------header----------------------------- */
 
@@ -615,6 +619,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 80px 0 100px 0;
 }
 
 .recipe-section__author {
@@ -638,8 +643,7 @@ body {
   border-radius: 10px;
 }
 .recipe-section__image img {
-  object-fit: cover;
-  object-position: 0 -270px;
+  object-fit: contain;
 }
 
 .recipe-section__text {
@@ -667,7 +671,7 @@ body {
   display: flex;
   align-items: top;
   border-width: 0px;
-  background-color: white;
+  background-color: transparent;
   font-size: 16px;
   color: grey;
   cursor: pointer;
@@ -680,10 +684,6 @@ body {
 }
 
 .metrics-button__label:active {
-  font-weight: bold;
-}
-
-.metrics:active {
   font-weight: bold;
 }
 
@@ -735,16 +735,12 @@ button:active {
   width: 235px;
   min-height: 178px;
   height: 178px;
-  position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
 .card-image {
-  position: absolute;
   object-fit: contain;
-  top: -150px;
-  transform: scale(1);
 }
 
 .recipe-card__content {
@@ -782,13 +778,15 @@ button:active {
 
 .recepi-card__metrics {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  width: 80%;
 }
 /* ---------------comments----------------------------- */
 
 .comments-section__container {
   display: flex;
   flex-direction: column;
+  padding: 100px 0px 80px 0;
 }
 
 .comments-section__post-form {
@@ -868,6 +866,13 @@ button:active {
   display: flex;
   gap: 15px;
 }
+
+.comment__image-button {
+  background-color: transparent;
+  border-width: 0;
+  cursor: pointer;
+}
+
 .comment__img {
   width: 76px;
   min-width: 76px;
