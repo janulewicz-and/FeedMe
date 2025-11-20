@@ -611,7 +611,7 @@ body {
 
 /* ---------------header----------------------------- */
 
-.recipe-section {
+.recipe-section__container {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -720,7 +720,7 @@ button:active {
 
 /* ---------------recepies----------------------------- */
 
-.recepies-section {
+.recepies-section__container {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -790,7 +790,7 @@ button:active {
 }
 /* ---------------comments----------------------------- */
 
-.comments-section {
+.comments-section__container {
   display: flex;
   flex-direction: column;
 }
