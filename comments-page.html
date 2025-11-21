@@ -347,12 +347,14 @@
               <div class="post-form__input-field">
                 <textarea
                   id="auto"
-                  class="textarea-field"
+                  class="growing-textarea-field"
                   rows="1"
                   placeholder="Express yoursef..."
                 ></textarea>
                 <script>
-                  const areas = document.querySelectorAll("#auto");
+                  const areas = document.querySelectorAll(
+                    ".growing-textarea-field"
+                  );
 
                   areas.forEach((area) => {
                     area.addEventListener("input", () => {
