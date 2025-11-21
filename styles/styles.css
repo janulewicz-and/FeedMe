@@ -615,11 +615,14 @@ body {
 
 /* ---------------header----------------------------- */
 
-.recepi-section__container {
+.recipe-section {
+  padding: 80px 0 100px 0;
+}
+
+.recipe-section__container {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 80px 0 100px 0;
 }
 
 .recipe-section__author {
@@ -676,11 +679,6 @@ body {
   color: grey;
   cursor: pointer;
   gap: 10px;
-  cursor: pointer;
-}
-
-.metrics-button__label {
-  cursor: pointer;
 }
 
 .metrics-button__label:active {
@@ -780,6 +778,7 @@ button:active {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  align-items: end;
 }
 /* ---------------comments----------------------------- */
 
@@ -839,6 +838,7 @@ button:active {
   width: 100%;
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .button--is-yellow {
