@@ -3,7 +3,7 @@
   <head>
     <title>Comments Page</title>
     <link rel="stylesheet" href="styles/CSSreset.css" />
-    <link rel="stylesheet" href="styles/mainPage.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/margin&padding.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,15 +18,14 @@
     <meta name="viewport" content="width=device-width" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="recipe-section">
       <div class="container">
-        <div class="recipe-section">
+        <div class="recipe-section__container">
           <div class="recipe-section__header">
             <div class="typography typography--title">
               Delicious fruits and pancakes
             </div>
-            <!-- <a class="author">Sir John Reed</a> -->
-            <a href="#" class="author">Sir John Reed</a>
+            <a href="#" class="recipe-section__author">Sir John Reed</a>
           </div>
           <div class="recipe-section__content">
             <div class="recipe-section__image">
@@ -50,44 +49,56 @@
           </div>
           <div class="recipe-section__footer">
             <div class="recipe-section__likes-comments">
-              <div class="metrics metrics--is-large">
-                <button
-                  id="likeBtn"
-                  class="material-symbols-outlined symbol metrics-button metrics-button--large-size"
+              <button
+                id="commentBtn"
+                class="metrics-button metrics-button--is-large"
+              >
+                <span class="metrics-button__icon material-symbols-outlined"
+                  >favorite</span
                 >
-                  favorite
-                  <span class="metrics-button__text">499 likes</span>
-                </button>
-              </div>
-              <div class="metrics metrics--is-large">
-                <button
-                  id="commentBtn"
-                  class="material-symbols-outlined symbol metrics-button metrics-button--large-size"
+                <span class="metrics-button__label">499 likes</span>
+              </button>
+
+              <button
+                id="commentBtn"
+                class="metrics-button metrics-button--is-large"
+              >
+                <span class="metrics-button__icon material-symbols-outlined"
+                  >comment</span
                 >
-                  comment <span class="metrics-button__text">12 comments</span>
-                </button>
-              </div>
+                <span class="metrics-button__label">12 comments</span>
+              </button>
             </div>
             <div class="recipe-section__button">
-              <button class="button">Clone to my cookbooks</button>
+              <button class="button button--is-yellow">
+                Clone to my cookbooks
+              </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="recepies-section">
       <div class="container">
-        <div class="recepies-section">
+        <div class="recepies-section__container">
           <div class="typography typography--title">Recepies</div>
+
           <div class="recepies-section__recipe-card">
             <div class="recipe-card">
               <div class="recipe-card__image">
-                <img src="/images/mainPage/imageRow/01.jpg" alt="" />
+                <img
+                  src="/images/mainPage/imageRow/01.jpg"
+                  alt=""
+                  class="card-image"
+                />
               </div>
               <div class="recipe-card__content">
                 <a href="#" class="recipe-card__title"
                   >Fresh meat with potato and cheeze</a
                 >
                 <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text typography">
+                <div class="recipe-card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
                   non ac eros, velit dapibus consequat vestibulum sapien
                   pharetra. Bibendum vel sollicitudin at purus egestas
@@ -96,33 +107,38 @@
                 </div>
                 <div class="recepi-card__footer">
                   <div class="recepi-card__metrics">
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="likeBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >favorite</span
                       >
-                        favorite</button
-                      >499 likes
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="commentBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">499 likes</span>
+                    </button>
+
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >comment</span
                       >
-                        comment</button
-                      >12 comments
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="visibilityBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">12 comments</span>
+                    </button>
+
+                    <div class="metrics-button metrics-button--is-small">
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >visibility</span
                       >
-                        visibility</button
-                      >12000 views
+                      <span class="metrics-button__label">12000 views</span>
                     </div>
                   </div>
                   <div class="recipe-card__button">
-                    <button class="button button--is-white">Save</button>
+                    <button class="button button--is-outlined">Save</button>
                   </div>
                 </div>
               </div>
@@ -132,14 +148,18 @@
           <div class="recepies-section__recipe-card">
             <div class="recipe-card">
               <div class="recipe-card__image">
-                <img src="/images/mainPage/imageRow/01.jpg" alt="" />
+                <img
+                  src="/images/mainPage/imageRow/01.jpg"
+                  alt=""
+                  class="card-image"
+                />
               </div>
               <div class="recipe-card__content">
                 <a href="#" class="recipe-card__title"
                   >Fresh meat with potato and cheeze</a
                 >
                 <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text typography">
+                <div class="recipe-card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
                   non ac eros, velit dapibus consequat vestibulum sapien
                   pharetra. Bibendum vel sollicitudin at purus egestas
@@ -148,40 +168,41 @@
                 </div>
                 <div class="recepi-card__footer">
                   <div class="recepi-card__metrics">
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="likeBtn"
-                        class="material-symbols-outlined symbol metrics-button .metrics-button--is-card"
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >favorite</span
                       >
-                        favorite
-                        <span
-                          class="metrics-button__text metrics-button__text--is-card"
-                          >499 likes</span
-                        >
-                      </button>
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="commentBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">499 likes</span>
+                    </button>
+
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >comment</span
                       >
-                        comment<span class="metrics-button__text"
-                          >12 comments</span
-                        >
-                      </button>
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="visibilityBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">12 comments</span>
+                    </button>
+
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >visibility</span
                       >
-                        visibility
-                        <span class="metrics-button__text">12000 views</span>
-                      </button>
-                    </div>
+                      <span class="metrics-button__label">12000 views</span>
+                    </button>
                   </div>
                   <div class="recipe-card__button">
-                    <button class="button button--is-white">Save</button>
+                    <button class="button button--is-outlined">Save</button>
                   </div>
                 </div>
               </div>
@@ -190,14 +211,18 @@
           <div class="recepies-section__recipe-card">
             <div class="recipe-card">
               <div class="recipe-card__image">
-                <img src="/images/mainPage/imageRow/01.jpg" alt="" />
+                <img
+                  src="/images/mainPage/imageRow/01.jpg"
+                  alt=""
+                  class="card-image"
+                />
               </div>
               <div class="recipe-card__content">
                 <a href="#" class="recipe-card__title"
                   >Fresh meat with potato and cheeze</a
                 >
                 <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text typography">
+                <div class="recipe-card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
                   non ac eros, velit dapibus consequat vestibulum sapien
                   pharetra. Bibendum vel sollicitudin at purus egestas
@@ -206,33 +231,41 @@
                 </div>
                 <div class="recepi-card__footer">
                   <div class="recepi-card__metrics">
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="likeBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >favorite</span
                       >
-                        favorite</button
-                      >499 likes
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="commentBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">499 likes</span>
+                    </button>
+
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >comment</span
                       >
-                        comment</button
-                      >12 comments
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="visibilityBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">12 comments</span>
+                    </button>
+
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >visibility</span
                       >
-                        visibility</button
-                      >12000 views
-                    </div>
+                      <span class="metrics-button__label">12000 views</span>
+                    </button>
                   </div>
                   <div class="recipe-card__button">
-                    <button class="button button--is-white">Save</button>
+                    <button class="button button--is-outlined">Save</button>
                   </div>
                 </div>
               </div>
@@ -241,14 +274,18 @@
           <div class="recepies-section__recipe-card">
             <div class="recipe-card">
               <div class="recipe-card__image">
-                <img src="/images/mainPage/imageRow/01.jpg" alt="" />
+                <img
+                  src="/images/mainPage/imageRow/01.jpg"
+                  alt=""
+                  class="card-image"
+                />
               </div>
               <div class="recipe-card__content">
                 <a href="#" class="recipe-card__title"
                   >Fresh meat with potato and cheeze</a
                 >
                 <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text typography">
+                <div class="recipe-card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
                   non ac eros, velit dapibus consequat vestibulum sapien
                   pharetra. Bibendum vel sollicitudin at purus egestas
@@ -257,33 +294,41 @@
                 </div>
                 <div class="recepi-card__footer">
                   <div class="recepi-card__metrics">
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="likeBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >favorite</span
                       >
-                        favorite</button
-                      >499 likes
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="commentBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">499 likes</span>
+                    </button>
+
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >comment</span
                       >
-                        comment</button
-                      >12 comments
-                    </div>
-                    <div class="metrics metrics--is-small">
-                      <button
-                        id="visibilityBtn"
-                        class="material-symbols-outlined symbol metrics-button"
+                      <span class="metrics-button__label">12 comments</span>
+                    </button>
+
+                    <button
+                      id="commentBtn"
+                      class="metrics-button metrics-button--is-small"
+                    >
+                      <span
+                        class="metrics-button__icon material-symbols-outlined"
+                        >visibility</span
                       >
-                        visibility</button
-                      >12000 views
-                    </div>
+                      <span class="metrics-button__label">12000 views</span>
+                    </button>
                   </div>
                   <div class="recipe-card__button">
-                    <button class="button button--is-white">Save</button>
+                    <button class="button button--is-outlined">Save</button>
                   </div>
                 </div>
               </div>
@@ -291,46 +336,49 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="comments-section">
       <div class="container">
-        <div class="comments-section">
+        <div class="comments-section__container">
           <div class="typography typography--subtitle">Comments (12)</div>
           <div class="comments-section__post-form">
             <div class="post-form">
               <div class="post-form__input-field">
                 <textarea
                   id="auto"
-                  class="textarea-field"
+                  class="growing-textarea-field"
                   rows="1"
                   placeholder="Express yoursef..."
                 ></textarea>
                 <script>
-                  const area = document.getElementById("auto");
+                  const areas = document.querySelectorAll(
+                    ".growing-textarea-field"
+                  );
 
-                  area.addEventListener("input", () => {
-                    area.style.height = "auto";
-                    area.style.height = area.scrollHeight + "px";
+                  areas.forEach((area) => {
+                    area.addEventListener("input", () => {
+                      area.style.height = "auto";
+                      area.style.height = area.scrollHeight + "px";
+                    });
                   });
                 </script>
-                <!-- 
-                <input
-                  type="text"
-                  class="input-field"
-                  placeholder="Express yoursef..."
-                /> -->
               </div>
               <div class="post-form__button">
-                <button class="button">Post</button>
+                <button class="button button--is-yellow">Post</button>
               </div>
             </div>
           </div>
           <div class="comments-section__comments">
             <div class="comments">
               <div class="comment">
-                <img
-                  src="/images/comments/01.png"
-                  class="comment__img"
-                  alt=""
-                />
+                <button class="comment__image-button">
+                  <img
+                    src="/images/comments/01.png"
+                    class="comment__img"
+                    alt=""
+                  />
+                </button>
 
                 <div class="comment__content">
                   <div class="comment__info">
@@ -346,11 +394,13 @@
                 </div>
               </div>
               <div class="comment">
-                <img
-                  src="/images/comments/01.png"
-                  class="comment__img"
-                  alt=""
-                />
+                <button class="comment__image-button">
+                  <img
+                    src="/images/comments/01.png"
+                    class="comment__img"
+                    alt=""
+                  />
+                </button>
 
                 <div class="comment__content">
                   <div class="comment__info">
@@ -366,11 +416,13 @@
                 </div>
               </div>
               <div class="comment">
-                <img
-                  src="/images/comments/01.png"
-                  class="comment__img"
-                  alt=""
-                />
+                <button class="comment__image-button">
+                  <img
+                    src="/images/comments/01.png"
+                    class="comment__img"
+                    alt=""
+                  />
+                </button>
 
                 <div class="comment__content">
                   <div class="comment__info">
@@ -386,11 +438,13 @@
                 </div>
               </div>
               <div class="comment">
-                <img
-                  src="/images/comments/01.png"
-                  class="comment__img"
-                  alt=""
-                />
+                <button class="comment__image-button">
+                  <img
+                    src="/images/comments/01.png"
+                    class="comment__img"
+                    alt=""
+                  />
+                </button>
 
                 <div class="comment__content">
                   <div class="comment__info">
