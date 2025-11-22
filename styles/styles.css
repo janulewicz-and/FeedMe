@@ -1,3 +1,15 @@
+.body-main-page {
+  display: flex;
+  justify-content: center;
+}
+
+.container-main-page {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+
 .main-page {
   font-family: Nunito;
   background-color: #fcfaf8;
@@ -93,14 +105,14 @@
   background-repeat: no-repeat;
 }
 
-/* .title {
+.title {
   color: black;
   font-size: 48px;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
 .top__card-row {
   display: flex;
   column-gap: 20px;
