@@ -15,329 +15,67 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="/comments-page/app.js"></script>
     <meta name="viewport" content="width=device-width" />
   </head>
   <body>
-    <div class="recipe-section">
-      <div class="container">
-        <div class="recipe-section__container">
-          <div class="recipe-section__header">
-            <div class="typography typography--title">
-              Delicious fruits and pancakes
-            </div>
-            <a href="#" class="recipe-section__author">Sir John Reed</a>
-          </div>
-          <div class="recipe-section__content">
-            <div class="recipe-section__image">
-              <img src="/images/comments/title-comments-image.jpg" alt="" />
-            </div>
-            <div class="recipe-section__text">
-              <div class="typography typography--title-small">Description</div>
-              <div class="typography typography--grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Bibendum tempus viverra augue ac elit. Interdum libero at
-                tristique fames faucibus. Massa a, consectetur et viverra
-                vulputate urna enim felis metus. Consequat morbi cras elit
-                mauris phasellus at fames eget. Nunc, at vitae integer morbi
-                nibh dignissim non tempus pellentesque. Erat platea augue sed
-                amet, tempor, sed sollicitudin. Viverra tincidunt eu nulla
-                pulvinar eget dolor. Dui, lacus sed ut id egestas elit, mi.
-                Pretium elementum commodo amet cursus massa dictum. Ac, pharetra
-                nisi, morbi maecenas facilisi.
-              </div>
-            </div>
-          </div>
-          <div class="recipe-section__footer">
-            <div class="recipe-section__likes-comments">
-              <button
-                id="commentBtn"
-                class="metrics-button metrics-button--is-large"
-              >
-                <span class="metrics-button__icon material-symbols-outlined"
-                  >favorite</span
-                >
-                <span class="metrics-button__label">499 likes</span>
-              </button>
-
-              <button
-                id="commentBtn"
-                class="metrics-button metrics-button--is-large"
-              >
-                <span class="metrics-button__icon material-symbols-outlined"
-                  >comment</span
-                >
-                <span class="metrics-button__label">12 comments</span>
-              </button>
-            </div>
-            <div class="recipe-section__button">
-              <button class="button button--is-yellow">
-                Clone to my cookbooks
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="comments-page-title">
+      <comments-title
+        title="Vlad can cook"
+        author="Vlad Krasny"
+        image="/images/comments/title-comments-image.jpg"
+        subtitle="Description"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus. Consequat morbi cras elit mauris phasellus at fames eget. Nunc, at vitae integer morbi nibh dignissim non tempus pellentesque. Erat platea augue sed amet, tempor, sed sollicitudin. Viverra tincidunt eu nulla pulvinar eget dolor. Dui, lacus sed ut id egestas elit, mi. Pretium elementum commodo amet cursus massa dictum. Ac, pharetra nisi, morbi maecenas facilisi."
+        likes="1 million"
+        comments="2 thousand"
+      ></comments-title>
     </div>
-
-    <div class="recepies-section">
+    <div id="app" class="recepies-section">
       <div class="container">
         <div class="recepies-section__container">
           <div class="typography typography--title">Recepies</div>
-
-          <div class="recepies-section__recipe-card">
-            <div class="recipe-card">
-              <div class="recipe-card__image">
-                <img
-                  src="/images/mainPage/imageRow/01.jpg"
-                  alt=""
-                  class="card-image"
-                />
-              </div>
-              <div class="recipe-card__content">
-                <a href="#" class="recipe-card__title"
-                  >Fresh meat with potato and cheeze</a
-                >
-                <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
-                  non ac eros, velit dapibus consequat vestibulum sapien
-                  pharetra. Bibendum vel sollicitudin at purus egestas
-                  tincidunt. Vulputate ac, ullamcorper etiam interdum vitae
-                  semper.
-                </div>
-                <div class="recepi-card__footer">
-                  <div class="recepi-card__metrics">
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >favorite</span
-                      >
-                      <span class="metrics-button__label">499 likes</span>
-                    </button>
-
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >comment</span
-                      >
-                      <span class="metrics-button__label">12 comments</span>
-                    </button>
-
-                    <div class="metrics-button metrics-button--is-small">
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >visibility</span
-                      >
-                      <span class="metrics-button__label">12000 views</span>
-                    </div>
-                  </div>
-                  <div class="recipe-card__button">
-                    <button class="button button--is-outlined">Save</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="recepies-section__recipe-card">
-            <div class="recipe-card">
-              <div class="recipe-card__image">
-                <img
-                  src="/images/mainPage/imageRow/01.jpg"
-                  alt=""
-                  class="card-image"
-                />
-              </div>
-              <div class="recipe-card__content">
-                <a href="#" class="recipe-card__title"
-                  >Fresh meat with potato and cheeze</a
-                >
-                <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
-                  non ac eros, velit dapibus consequat vestibulum sapien
-                  pharetra. Bibendum vel sollicitudin at purus egestas
-                  tincidunt. Vulputate ac, ullamcorper etiam interdum vitae
-                  semper.
-                </div>
-                <div class="recepi-card__footer">
-                  <div class="recepi-card__metrics">
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >favorite</span
-                      >
-                      <span class="metrics-button__label">499 likes</span>
-                    </button>
-
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >comment</span
-                      >
-                      <span class="metrics-button__label">12 comments</span>
-                    </button>
-
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >visibility</span
-                      >
-                      <span class="metrics-button__label">12000 views</span>
-                    </button>
-                  </div>
-                  <div class="recipe-card__button">
-                    <button class="button button--is-outlined">Save</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="recepies-section__recipe-card">
-            <div class="recipe-card">
-              <div class="recipe-card__image">
-                <img
-                  src="/images/mainPage/imageRow/01.jpg"
-                  alt=""
-                  class="card-image"
-                />
-              </div>
-              <div class="recipe-card__content">
-                <a href="#" class="recipe-card__title"
-                  >Fresh meat with potato and cheeze</a
-                >
-                <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
-                  non ac eros, velit dapibus consequat vestibulum sapien
-                  pharetra. Bibendum vel sollicitudin at purus egestas
-                  tincidunt. Vulputate ac, ullamcorper etiam interdum vitae
-                  semper.
-                </div>
-                <div class="recepi-card__footer">
-                  <div class="recepi-card__metrics">
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >favorite</span
-                      >
-                      <span class="metrics-button__label">499 likes</span>
-                    </button>
-
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >comment</span
-                      >
-                      <span class="metrics-button__label">12 comments</span>
-                    </button>
-
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >visibility</span
-                      >
-                      <span class="metrics-button__label">12000 views</span>
-                    </button>
-                  </div>
-                  <div class="recipe-card__button">
-                    <button class="button button--is-outlined">Save</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="recepies-section__recipe-card">
-            <div class="recipe-card">
-              <div class="recipe-card__image">
-                <img
-                  src="/images/mainPage/imageRow/01.jpg"
-                  alt=""
-                  class="card-image"
-                />
-              </div>
-              <div class="recipe-card__content">
-                <a href="#" class="recipe-card__title"
-                  >Fresh meat with potato and cheeze</a
-                >
-                <div class="recipe-card__author">John Doe</div>
-                <div class="recipe-card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo
-                  non ac eros, velit dapibus consequat vestibulum sapien
-                  pharetra. Bibendum vel sollicitudin at purus egestas
-                  tincidunt. Vulputate ac, ullamcorper etiam interdum vitae
-                  semper.
-                </div>
-                <div class="recepi-card__footer">
-                  <div class="recepi-card__metrics">
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >favorite</span
-                      >
-                      <span class="metrics-button__label">499 likes</span>
-                    </button>
-
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >comment</span
-                      >
-                      <span class="metrics-button__label">12 comments</span>
-                    </button>
-
-                    <button
-                      id="commentBtn"
-                      class="metrics-button metrics-button--is-small"
-                    >
-                      <span
-                        class="metrics-button__icon material-symbols-outlined"
-                        >visibility</span
-                      >
-                      <span class="metrics-button__label">12000 views</span>
-                    </button>
-                  </div>
-                  <div class="recipe-card__button">
-                    <button class="button button--is-outlined">Save</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div id="recipeCardApp" class="recepies-section__container">
+            <recipe-card
+              author="Vlad Krasny"
+              title="Vlad can cook"
+              image="/images/mainPage/imageRow/01.jpg"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
+              likes="1 million"
+              comments="2 thousand"
+              views="500 thousand"
+            ></recipe-card>
+            <recipe-card
+              author="Vlad Krasny"
+              title="Vlad can cook"
+              image="/images/mainPage/imageRow/01.jpg"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
+              likes="1 million"
+              comments="2 thousand"
+              views="500 thousand"
+            ></recipe-card
+            ><recipe-card
+              author="Vlad Krasny"
+              title="Vlad can cook"
+              image="/images/mainPage/imageRow/01.jpg"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
+              likes="1 million"
+              comments="2 thousand"
+              views="500 thousand"
+            ></recipe-card
+            ><recipe-card
+              author="Vlad Krasny"
+              title="Vlad can cook"
+              image="/images/mainPage/imageRow/01.jpg"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
+              likes="1 million"
+              comments="2 thousand"
+              views="500 thousand"
+            ></recipe-card>
           </div>
         </div>
       </div>
     </div>
-
     <div class="comments-section">
       <div class="container">
         <div class="comments-section__container">
@@ -346,119 +84,61 @@
             <div class="post-form">
               <div class="post-form__input-field">
                 <textarea
-                  id="auto"
+                  id="comments-page-text-area"
                   class="growing-textarea-field"
                   rows="1"
                   placeholder="Express yoursef..."
-                ></textarea>
-                <script>
-                  const areas = document.querySelectorAll(
-                    ".growing-textarea-field"
-                  );
-
-                  areas.forEach((area) => {
-                    area.addEventListener("input", () => {
-                      area.style.height = "auto";
-                      area.style.height = area.scrollHeight + "px";
-                    });
-                  });
-                </script>
+                >
+                </textarea>
               </div>
+
               <div class="post-form__button">
                 <button class="button button--is-yellow">Post</button>
               </div>
             </div>
           </div>
           <div class="comments-section__comments">
-            <div class="comments">
-              <div class="comment">
-                <button class="comment__image-button">
-                  <img
-                    src="/images/comments/01.png"
-                    class="comment__img"
-                    alt=""
-                  />
-                </button>
-
-                <div class="comment__content">
-                  <div class="comment__info">
-                    <a href="#" class="comment__author">Vlad Krasny</a>
-                    <div class="comment__time">5 minutes ago</div>
-                  </div>
-                  <div class="comment__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Viverra blandit donec pellentesque ut non mauris lobortis.
-                    Iaculis leo, purus scelerisque id lacus et malesuada ipsum,
-                    quis. Eget fusce venenatis eu ut leo est erat.
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <button class="comment__image-button">
-                  <img
-                    src="/images/comments/01.png"
-                    class="comment__img"
-                    alt=""
-                  />
-                </button>
-
-                <div class="comment__content">
-                  <div class="comment__info">
-                    <a href="#" class="comment__author">Vlad Krasny</a>
-                    <div class="comment__time">5 minutes ago</div>
-                  </div>
-                  <div class="comment__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Viverra blandit donec pellentesque ut non mauris lobortis.
-                    Iaculis leo, purus scelerisque id lacus et malesuada ipsum,
-                    quis. Eget fusce venenatis eu ut leo est erat.
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <button class="comment__image-button">
-                  <img
-                    src="/images/comments/01.png"
-                    class="comment__img"
-                    alt=""
-                  />
-                </button>
-
-                <div class="comment__content">
-                  <div class="comment__info">
-                    <a href="#" class="comment__author">Vlad Krasny</a>
-                    <div class="comment__time">5 minutes ago</div>
-                  </div>
-                  <div class="comment__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Viverra blandit donec pellentesque ut non mauris lobortis.
-                    Iaculis leo, purus scelerisque id lacus et malesuada ipsum,
-                    quis. Eget fusce venenatis eu ut leo est erat.
-                  </div>
-                </div>
-              </div>
-              <div class="comment">
-                <button class="comment__image-button">
-                  <img
-                    src="/images/comments/01.png"
-                    class="comment__img"
-                    alt=""
-                  />
-                </button>
-
-                <div class="comment__content">
-                  <div class="comment__info">
-                    <a href="#" class="comment__author">Vlad Krasny</a>
-                    <div class="comment__time">5 minutes ago</div>
-                  </div>
-                  <div class="comment__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Viverra blandit donec pellentesque ut non mauris lobortis.
-                    Iaculis leo, purus scelerisque id lacus et malesuada ipsum,
-                    quis. Eget fusce venenatis eu ut leo est erat.
-                  </div>
-                </div>
-              </div>
+            <div id="comments-section" class="comments">
+              <comment-card
+                image="/images/comments/01.png"
+                author="Vlad Krasny"
+                time="2 hours ago"
+                text="Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Bibendum tempus viverra augue ac elit.
+                  Interdum libero at tristique fames faucibus. Massa a,
+                  consectetur et viverra vulputate urna enim felis metus."
+              >
+              </comment-card>
+              <comment-card
+                image="/images/comments/01.png"
+                author="Vlad Krasny"
+                time="2 hours ago"
+                text="Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Bibendum tempus viverra augue ac elit.
+                  Interdum libero at tristique fames faucibus. Massa a,
+                  consectetur et viverra vulputate urna enim felis metus."
+              >
+              </comment-card>
+              <comment-card
+                image="/images/comments/01.png"
+                author="Vlad Krasny"
+                time="2 hours ago"
+                text="Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Bibendum tempus viverra augue ac elit.
+                  Interdum libero at tristique fames faucibus. Massa a,
+                  consectetur et viverra vulputate urna enim felis metus."
+              >
+              </comment-card>
+              <comment-card
+                image="/images/comments/01.png"
+                author="Vlad Krasny"
+                time="2 hours ago"
+                text="Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Bibendum tempus viverra augue ac elit.
+                  Interdum libero at tristique fames faucibus. Massa a,
+                  consectetur et viverra vulputate urna enim felis metus."
+              >
+              </comment-card>
             </div>
           </div>
         </div>
