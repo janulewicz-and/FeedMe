@@ -1,4 +1,4 @@
-export const CommentCard = {
+export const CommentsCard = {
   props: {
     image: String,
     author: String,
@@ -6,13 +6,12 @@ export const CommentCard = {
     text: String,
   },
 
-  template: ` 
-<div class="comment">
+  components: {},
+  template: `<div class="comment">
                 <button class="comment__image-button">
                   <img
                     :src="image"
                     class="comment__img"
-                    alt=""
                   />
                 </button>
                 <div class="comment__content">
@@ -21,9 +20,8 @@ export const CommentCard = {
                     <div class="comment__time">{{time}}</div>
                   </div>
                   <div class="comment__text">
-                  {{text}}
+                    {{text}}
                   </div>
                 </div>
-              </div>
-`,
+              </div>`,
 };

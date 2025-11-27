@@ -1,30 +1,29 @@
-import { CommentCard } from "./comments.js";
-import { RecipeCard } from "./recepies.js";
-import { CommentsTitle } from "./commentsTitle.js";
-import { TextAreaAutoGrow } from "./text-area.js";
+import { CommentsSection } from "./CommentsSection.js";
+import { CommentsCard } from "./CommentsCard.js";
+import { RecipeCard } from "./RecipeCard.js";
+import { RecipeSection } from "./RecipeSection.js";
+import { PostForm } from "./PostForm.js";
+import { RecepiesSection } from "./RecepiesSection.js";
+import { CommentsArr } from "./CommentsArr.js";
+import { RecepiesArr } from "./RecepiesArr.js";
 
 const { createApp } = window.Vue;
 
 createApp({
+  data() {
+    return {
+      comments: CommentsArr,
+      recepies: RecepiesArr,
+    };
+  },
+
   components: {
     RecipeCard,
+    CommentsCard,
+    PostForm,
+    RecipeSection,
+    RecepiesSection,
+    CommentsSection,
+    CommentsArr,
   },
-}).mount("#recipeCardApp");
-
-createApp({
-  components: {
-    CommentCard,
-  },
-}).mount("#comments-section");
-
-createApp({
-  components: {
-    TextAreaAutoGrow,
-  },
-}).mount("#comments-page-text-area");
-
-createApp({
-  components: {
-    CommentsTitle,
-  },
-}).mount("#comments-page-title");
+}).mount("#app");

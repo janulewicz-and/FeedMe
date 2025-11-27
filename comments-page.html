@@ -19,132 +19,43 @@
     <script type="module" src="/comments-page/app.js"></script>
     <meta name="viewport" content="width=device-width" />
   </head>
-  <body>
-    <div id="comments-page-title">
-      <comments-title
-        title="Vlad can cook"
-        author="Vlad Krasny"
-        image="/images/comments/title-comments-image.jpg"
-        subtitle="Description"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus. Consequat morbi cras elit mauris phasellus at fames eget. Nunc, at vitae integer morbi nibh dignissim non tempus pellentesque. Erat platea augue sed amet, tempor, sed sollicitudin. Viverra tincidunt eu nulla pulvinar eget dolor. Dui, lacus sed ut id egestas elit, mi. Pretium elementum commodo amet cursus massa dictum. Ac, pharetra nisi, morbi maecenas facilisi."
-        likes="1 million"
-        comments="2 thousand"
-      ></comments-title>
-    </div>
-    <div id="app" class="recepies-section">
-      <div class="container">
-        <div class="recepies-section__container">
-          <div class="typography typography--title">Recepies</div>
-          <div id="recipeCardApp" class="recepies-section__container">
-            <recipe-card
-              author="Vlad Krasny"
-              title="Vlad can cook"
-              image="/images/mainPage/imageRow/01.jpg"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
-              likes="1 million"
-              comments="2 thousand"
-              views="500 thousand"
-            ></recipe-card>
-            <recipe-card
-              author="Vlad Krasny"
-              title="Vlad can cook"
-              image="/images/mainPage/imageRow/01.jpg"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
-              likes="1 million"
-              comments="2 thousand"
-              views="500 thousand"
-            ></recipe-card
-            ><recipe-card
-              author="Vlad Krasny"
-              title="Vlad can cook"
-              image="/images/mainPage/imageRow/01.jpg"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
-              likes="1 million"
-              comments="2 thousand"
-              views="500 thousand"
-            ></recipe-card
-            ><recipe-card
-              author="Vlad Krasny"
-              title="Vlad can cook"
-              image="/images/mainPage/imageRow/01.jpg"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus."
-              likes="1 million"
-              comments="2 thousand"
-              views="500 thousand"
-            ></recipe-card>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="comments-section">
-      <div class="container">
-        <div class="comments-section__container">
-          <div class="typography typography--subtitle">Comments (12)</div>
-          <div class="comments-section__post-form">
-            <div class="post-form">
-              <div id="comments-page-text-area">
-                <text-area-auto-grow></text-area-auto-grow>
-              </div>
-              <div class="post-form__input-field">
-                <textarea
-                  class="growing-textarea-field"
-                  rows="1"
-                  placeholder="Express yoursef..."
-                >
-                </textarea>
-              </div>
+  <body id="app">
+    <recipe-section
+      title="Vlad can cook"
+      author="Vlad Krasny"
+      image="/images/mainPage/imageRow/01.jpg"
+      subtitle="Short description"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum
+              tempus viverra augue ac elit. Interdum libero at tristique fames
+              faucibus. Massa a, consectetur et viverra vulputate urna enim
+              felis metus."
+      :likes="12"
+      :comments="5"
+    >
+    </recipe-section>
 
-              <div class="post-form__button">
-                <button class="button button--is-yellow">Post</button>
-              </div>
-            </div>
-          </div>
-          <div class="comments-section__comments">
-            <div id="comments-section" class="comments">
-              <comment-card
-                image="/images/comments/01.png"
-                author="Vlad Krasny"
-                time="2 hours ago"
-                text="Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Bibendum tempus viverra augue ac elit.
-                  Interdum libero at tristique fames faucibus. Massa a,
-                  consectetur et viverra vulputate urna enim felis metus."
-              >
-              </comment-card>
-              <comment-card
-                image="/images/comments/01.png"
-                author="Vlad Krasny"
-                time="2 hours ago"
-                text="Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Bibendum tempus viverra augue ac elit.
-                  Interdum libero at tristique fames faucibus. Massa a,
-                  consectetur et viverra vulputate urna enim felis metus."
-              >
-              </comment-card>
-              <comment-card
-                image="/images/comments/01.png"
-                author="Vlad Krasny"
-                time="2 hours ago"
-                text="Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Bibendum tempus viverra augue ac elit.
-                  Interdum libero at tristique fames faucibus. Massa a,
-                  consectetur et viverra vulputate urna enim felis metus."
-              >
-              </comment-card>
-              <comment-card
-                image="/images/comments/01.png"
-                author="Vlad Krasny"
-                time="2 hours ago"
-                text="Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Bibendum tempus viverra augue ac elit.
-                  Interdum libero at tristique fames faucibus. Massa a,
-                  consectetur et viverra vulputate urna enim felis metus."
-              >
-              </comment-card>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <recepies-section>
+      <recipe-card
+        v-for="r in recepies"
+        :key="r.id"
+        :title="r.title"
+        :author="r.author"
+        :text="r.text"
+        :likes="r.likes"
+        :comments="r.comments"
+        :views="r.views"
+        :image="r.image"
+      ></recipe-card>
+    </recepies-section>
+    <comments-section :comments-number="comments.length">
+      <comments-card
+        v-for="c in comments"
+        :key="c.id"
+        :image="c.image"
+        :author="c.author"
+        :time="c.time"
+        :text="c.text"
+      ></comments-card>
+    </comments-section>
   </body>
 </html>
