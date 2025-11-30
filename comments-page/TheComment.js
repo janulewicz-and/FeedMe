@@ -1,16 +1,15 @@
-export const CommentsCard = {
+export const TheComment = {
   props: {
-    image: String,
+    imageSrc: String,
     author: String,
     time: String,
     text: String,
   },
 
-  components: {},
   template: `<div class="comment">
                 <button class="comment__image-button">
                   <img
-                    :src="image"
+                    :src="imageSrc"
                     class="comment__img"
                   />
                 </button>

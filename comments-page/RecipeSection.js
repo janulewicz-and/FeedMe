@@ -2,16 +2,17 @@ import { TheContainer } from "./TheContainer.js";
 import { TheTypography } from "./TheTypography.js";
 import { MetricsButton } from "./MetricsButton.js";
 import { TheButton } from "./TheButton.js";
+import { recipeHeaderData } from "./data.js";
 
 export const RecipeSection = {
-  props: {
-    title: String,
-    author: String,
-    image: String,
-    subtitle: String,
-    text: String,
-    likes: [String, Number],
-    comments: [String, Number],
+  data() {
+    return { recipeHeaderData };
+  },
+
+  computed: {
+    RecipeData() {
+      return this.recipeHeaderData[0];
+    },
   },
 
   components: { TheContainer, TheTypography, MetricsButton, TheButton },
@@ -21,20 +22,20 @@ export const RecipeSection = {
         <div class="recipe-section__container">
           <div class="recipe-section__header">
             <TheTypography variant="title">
-              {{ title }}
+              {{ RecipeData.title }}
             </TheTypography>
-            <a href="#" class="recipe-section__author">{{ author }}</a>
+            <a href="#" class="recipe-section__author">{{ RecipeData.author }}</a>
           </div>
           <div class="recipe-section__content">
             <div class="recipe-section__image">
-              <img :src="image" alt="" />
+              <img :src="RecipeData.imageSrc" alt="" />
             </div>
             <div class="recipe-section__text">
               <TheTypography variant="title-small">
-                {{ subtitle }}
+                {{ RecipeData.subtitle }}
               </TheTypography>
               <TheTypography variant="grey">
-                {{ text }}
+                {{ RecipeData.text }}
               </TheTypography>
             </div>
           </div>
@@ -42,17 +43,19 @@ export const RecipeSection = {
             <div class="recipe-section__likes-comments">
               <MetricsButton
                 variant="large"
-                :number="likes"
+                :number="RecipeData.likes"
                 symbol="favorite"
+                label="likes"
               >
-                likes
+                
               </MetricsButton>
               <MetricsButton
                 variant="large"
-                :number="comments"
+                :number="RecipeData.comments"
                 symbol="comment"
+                label="comments"
               >
-                comments
+                
               </MetricsButton>
             </div>
             <div class="recipe-section__button">         

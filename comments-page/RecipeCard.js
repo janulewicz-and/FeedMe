@@ -32,22 +32,24 @@ export const RecipeCard = {
           variant="is-small"
           :number="comments"
           symbol="comment"
+          label="comments"
         >
-          comments
         </MetricsButton>
         <MetricsButton
           variant="is-small"
           :number="likes"
           symbol="favorite"
+          label="likes"
         >
-          likes
+          
         </MetricsButton>
         <MetricsButton
           variant="is-small"
           :number="views"
           symbol="visibility"
+          label="views"
         >
-          views
+          
         </MetricsButton>
       </div>
       <div class="recipe-card__button">

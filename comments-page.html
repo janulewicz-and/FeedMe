@@ -20,42 +20,8 @@
     <meta name="viewport" content="width=device-width" />
   </head>
   <body id="app">
-    <recipe-section
-      title="Vlad can cook"
-      author="Vlad Krasny"
-      image="/images/mainPage/imageRow/01.jpg"
-      subtitle="Short description"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum
-              tempus viverra augue ac elit. Interdum libero at tristique fames
-              faucibus. Massa a, consectetur et viverra vulputate urna enim
-              felis metus."
-      :likes="12"
-      :comments="5"
-    >
-    </recipe-section>
-
-    <recepies-section>
-      <recipe-card
-        v-for="r in recepies"
-        :key="r.id"
-        :title="r.title"
-        :author="r.author"
-        :text="r.text"
-        :likes="r.likes"
-        :comments="r.comments"
-        :views="r.views"
-        :image="r.image"
-      ></recipe-card>
-    </recepies-section>
-    <comments-section :comments-number="comments.length">
-      <comments-card
-        v-for="c in comments"
-        :key="c.id"
-        :image="c.image"
-        :author="c.author"
-        :time="c.time"
-        :text="c.text"
-      ></comments-card>
-    </comments-section>
+    <recipe-section> </recipe-section>
+    <recepies-section> </recepies-section>
+    <comments-section> </comments-section>
   </body>
 </html>

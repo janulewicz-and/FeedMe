@@ -3,6 +3,7 @@ export const MetricsButton = {
     variant: String,
     number: [String, Number],
     symbol: String,
+    label: String,
   },
 
   template: `
@@ -13,7 +14,7 @@ export const MetricsButton = {
         {{ symbol }}
       </span>
       <span class="metrics-button__label">
-        {{ number }} <slot></slot>
+        {{ number }} {{label}}
       </span>
     </button>
   `,
