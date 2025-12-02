@@ -57,13 +57,7 @@ import { recipeHeaderData } from "./data.js";
 export default {
   name: "RecipeSection",
   data() {
-    return { recipeHeaderData };
-  },
-
-  computed: {
-    recipeData() {
-      return this.recipeHeaderData[0];
-    },
+    return { recipeData: recipeHeaderData };
   },
 
   components: { TheContainer, TheTypography, MetricsButton, TheButton },

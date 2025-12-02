@@ -3,10 +3,10 @@
     <TheContainer>
       <div class="comments-section__container">
         <TheTypography variant="subtitle" content="Comments">
-          ({{ commentsLength() }})
+          ({{ comments.length }})
         </TheTypography>
         <div class="comments-section__post-form">
-          <PostForm button="Post"></PostForm>
+          <PostForm submitLabel="Post" />
         </div>
         <div class="comments-section__comments">
           <the-comment
@@ -36,12 +36,6 @@ export default {
     return {
       comments: comments,
     };
-  },
-
-  methods: {
-    commentsLength() {
-      return this.comments.length;
-    },
   },
 
   components: {

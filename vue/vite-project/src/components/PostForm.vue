@@ -2,7 +2,7 @@
   <div class="post-form">
     <GrowingTextArea></GrowingTextArea>
     <div class="post-form__button">
-      <TheButton variant="is-yellow">{{ button }}</TheButton>
+      <TheButton variant="is-yellow">{{ submitLabel }}</TheButton>
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@ import GrowingTextArea from "./GrowingTextArea.vue";
 
 export default {
   props: {
-    button: String,
+    submitLabel: String,
   },
   name: "PostForm",
   components: {

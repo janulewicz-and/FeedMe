@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vue</title>
+  </head>
+  <body>
+    <div id="shopping-list">
+      <div>
+        <h1>{{header || Welcome}}</h1>
+        <button v-if="edeting" @:click="doEdit(false)">cancel</button>
+        <button v-else @:click="doEdit(true)">add item</button>
+      </div>
+
+      <form v-if="edeting" class="add-item" @:submit.prevent="save">
+        <input
+          v-model.trim="newItem"
+          type="text"
+          placeholder="add new product"
+        />
+        <p class="some">{{ammount}}/200</p>
+        <label>
+          <input type="checkbox" v-model="priority" />
+          high priority
+        </label>
+        <button :disabled="newItem.length===0" @:click="save">save</button>
+      </form>
+      <p v-if="items.length===0">Cool you've bought all your items</p>
+      <ul>
+        <!-- <li v-for="item in items" @:click="toogle(item)" :key="item.id" :class="{strikeout: item.perchased, priority: item.priority}">{{item.id}}{{item.label}}</li>
+        <li v-for="item in items" :key="item.id" :class="[item.purchased ? "strikeout textgray": 'otherclass' ]">{{item.id}}{{item.label}}</li>
+         <li v-for="item in items" :key="item.id" :class="[{strikeout: item.perchased}, {priority: item.priority}, "staticclass" ]">{{item.id}}{{item.label}}</li> -->
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+      const ShopingList = Vue.createApp({
+        data() {
+          return {
+            edeting: false,
+            header: "Welcome",
+            items: [
+              { id: 1, label: "hi from vue", purchased: true },
+              { id: 2, label: "hi from react", purchased: true },
+              { id: 3, label: "hi from js", purchased: false },
+            ],
+            newItem: "",
+            priority: false,
+          };
+        },
+        computed: {
+          ammount() {
+            return this.newItem.length;
+          },
+        },
+        methods: {
+          save() {
+            this.items.push({
+              label: this.newItem,
+              id: this.items.length + 1,
+              priority: this.newItem.priority,
+            });
+            this.newItem = "";
+            this.newItem.priority = "";
+          },
+          doEdit(edeting) {
+            this.edeting = edeting;
+            this.newItem = "";
+            this.newItem.priority = "";
+          },
+          toogle(item) {
+            item.purchased = !item.purchased;
+          },
+        },
+      }).mount("#shopping-list");
+    </script>
+  </body>
+</html>

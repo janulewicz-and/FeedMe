@@ -2,7 +2,7 @@
   <div class="post-form__input-field">
     <textarea
       ref="growingText"
-      v-model="text"
+      v-model="TextValue"
       class="post-form__growing-textarea-field"
       rows="1"
       placeholder="Express yoursef..."
@@ -12,13 +12,18 @@
 </template>
 <script>
 export default {
+  props: {
+    text: {
+      type: String,
+    },
+  },
   name: "GrowingTextArea",
   methods: {
     autoGrow() {
       const area = this.$refs.growingText;
       area.style.height = "auto";
       area.style.height = area.scrollHeight + "px";
-      this.$emit("update:text", area.value);
+      this.$emit("update:TextValue", area.value);
     },
   },
 };
