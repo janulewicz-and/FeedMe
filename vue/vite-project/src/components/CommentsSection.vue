@@ -2,8 +2,8 @@
   <div class="comments-section">
     <TheContainer>
       <div class="comments-section__container">
-        <TheTypography variant="subtitle" content="Comments">
-          ({{ comments.length }})
+        <TheTypography variant="subtitle">
+          Comments ({{ comments.length }})
         </TheTypography>
         <div class="comments-section__post-form">
           <PostForm submitLabel="Post" />

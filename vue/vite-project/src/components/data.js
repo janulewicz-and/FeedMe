@@ -1,14 +1,3 @@
-export const recipeHeaderData = {
-  id: 1,
-  title: "Vlad can cook",
-  author: "Vlad Krasny",
-  imageSrc: "/images/mainPage/imageRow/01.jpg",
-  subtitle: "Short description",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum tempus viverra augue ac elit. Interdum libero at tristique fames faucibus. Massa a, consectetur et viverra vulputate urna enim felis metus.",
-  likes: 12,
-  comments: 5,
-};
-
 export const comments = [
   {
     id: 1,

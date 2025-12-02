@@ -4,20 +4,20 @@
       <div class="recipe-section__container">
         <div>
           <TheTypography variant="title">
-            {{ recipeData.title }}
+            {{ recipe.title }}
           </TheTypography>
-          <a href="#" class="recipe-section__author">{{ recipeData.author }}</a>
+          <a href="#" class="recipe-section__author">{{ recipe.author }}</a>
         </div>
         <div class="recipe-section__content">
           <div class="recipe-section__image">
-            <img :src="recipeData.imageSrc" alt="" />
+            <img :src="recipe.imageSrc" alt="" />
           </div>
           <div class="recipe-section__text">
             <TheTypography variant="title-small">
-              {{ recipeData.subtitle }}
+              {{ recipe.subtitle }}
             </TheTypography>
             <TheTypography variant="grey">
-              {{ recipeData.text }}
+              {{ recipe.text }}
             </TheTypography>
           </div>
         </div>
@@ -25,14 +25,14 @@
           <div class="recipe-section__likes-comments">
             <MetricsButton
               variant="large"
-              :number="recipeData.likes"
+              :number="recipe.likes"
               symbol="favorite"
               label="likes"
             >
             </MetricsButton>
             <MetricsButton
               variant="large"
-              :number="recipeData.comments"
+              :number="recipe.comments"
               symbol="comment"
               label="comments"
             >
@@ -52,12 +52,11 @@ import TheContainer from "./TheContainer.vue";
 import TheTypography from "./TheTypography.vue";
 import MetricsButton from "./MetricsButton.vue";
 import TheButton from "./TheButton.vue";
-import { recipeHeaderData } from "./data.js";
 
 export default {
   name: "RecipeSection",
-  data() {
-    return { recipeData: recipeHeaderData };
+  props: {
+    recipe: Object,
   },
 
   components: { TheContainer, TheTypography, MetricsButton, TheButton },

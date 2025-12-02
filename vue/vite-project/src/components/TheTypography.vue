@@ -1,6 +1,6 @@
 <template>
   <div :class="['typography', variant ? 'typography--' + variant : '']">
-    <slot></slot>{{ content }}
+    <slot></slot>
   </div>
 </template>
 
@@ -9,7 +9,6 @@ export default {
   name: "TheTypography",
   props: {
     variant: String,
-    content: String,
   },
 };
 </script>

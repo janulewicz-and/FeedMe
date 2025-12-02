@@ -2,7 +2,7 @@
   <div class="recepies-section">
     <TheContainer>
       <div class="recepies-section__container">
-        <TheTypography variant="subtitle" content="Recipies"></TheTypography>
+        <TheTypography variant="subtitle">Recipies</TheTypography>
         <recipe-card
           v-for="r in recepies"
           :key="r.id"
@@ -22,13 +22,12 @@
 <script>
 import RecipeCard from "./RecipeCard.vue";
 import TheContainer from "./TheContainer.vue";
-import { recipies } from "./data.js";
 import TheTypography from "./TheTypography.vue";
 
 export default {
   name: "RecepiesSection",
-  data() {
-    return { recepies: recipies };
+  props: {
+    recepies: Array,
   },
   components: { RecipeCard, TheContainer, TheTypography },
 };
